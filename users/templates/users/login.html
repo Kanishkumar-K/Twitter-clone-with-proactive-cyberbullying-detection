@@ -1,0 +1,40 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block extra_head %}
+    <!-- Include Material-UI CSS (assuming you have it hosted or installed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-ui/5.2.3/styles.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form method="POST" class="col-12 col-md-6 pl-3 pr-3 pl-md-0 pr-md-0">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="mb-3 white-important">
+                Login
+            </legend>
+            <!-- Integrate Material-UI components with crispy_forms -->
+            {{ form | crispy }}
+        </fieldset>
+        <div class="form-group">
+            <!-- Use Material-UI styled button -->
+            <button class="btn btn-outline-primary" type="submit">Login</button>
+        </div>
+    </form>
+    <div class="pt-3">
+        <small class="text-muted">
+            Do you need an account? <a class="ml-2" href="{% url 'register-users' %}">Sign up</a>
+        </small>
+    </div>
+</div>
+
+<!-- Add Material-UI JavaScript (for interactive components) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/material-ui/5.2.3/material.min.js"></script>
+
+<script>
+    // Optional: You can add custom JavaScript for Material-UI interactions here
+    // For example, adding touch effects or animations
+</script>
+
+{% endblock content %}
