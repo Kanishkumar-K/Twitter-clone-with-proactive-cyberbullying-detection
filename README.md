@@ -1,5 +1,5 @@
 <h2>Project : Cyber-Bullying Prevention and Detection</h2>
-<p>Team Members: </p> <br />
+<h3>Team Members: </h3> 
 <p>KanishKumar K</p>
 <p>Satyavarssheni Ra V</p>
 <p>Alan Judith A</p>
